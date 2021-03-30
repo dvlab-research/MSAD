@@ -6,7 +6,7 @@ Lu Qi, Jason Kuen, Jiuxiang Gu, Zhe Lin, Yi Wang, Yukang Chen, Yanwei Li, Jiaya 
 <!-- [[`arXiv`](https://arxiv.org/pdf/2012.00720.pdf)] [[`BibTeX`](#CitingPanopticFCN)] -->
 
 <div align="center">
-  <img src="docs/Framework-crop.pdf"/>
+  <img src="docs/Framework-crop.png"/>
 </div><br/>
 
 
