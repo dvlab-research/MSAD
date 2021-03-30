@@ -6,11 +6,11 @@ Lu Qi, Jason Kuen, Jiuxiang Gu, Zhe Lin, Yi Wang, Yukang Chen, Yanwei Li, Jiaya 
 <!-- [[`arXiv`](https://arxiv.org/pdf/2012.00720.pdf)] [[`BibTeX`](#CitingPanopticFCN)] -->
 
 <div align="center">
-  <img src="docs/panoptic_fcn.png"/>
+  <img src="docs/Framework-crop.pdf"/>
 </div><br/>
 
 
-This project provides an implementation for the CVPR 2021 paper "[Multi-Scale Aligned Distillation for Low-Resolution Detection]" based on [Detectron2](https://github.com/facebookresearch/detectron2). MSAD target to detect objects in low-resolution image size, with obtaining comparable performance to high-resolution image size. Our paper use Slimmable Neural Networks(https://arxiv.org/abs/1812.08928) as our pretrained weight.
+This project provides an implementation for the CVPR 2021 paper "[Multi-Scale Aligned Distillation for Low-Resolution Detection]" based on [Detectron2](https://github.com/facebookresearch/detectron2). MSAD target to detect objects in low-resolution image size, with obtaining comparable performance to high-resolution image size. Our paper use [Slimmable Neural Networks](https://arxiv.org/abs/1812.08928) as our pretrained weight.
 
 
 ## Installation
