@@ -64,6 +64,7 @@ class SL_RESNET(Backbone):
         depth           = cfg.MODEL.SLRESNETS.DEPTH
         width_mult_list = cfg.MODEL.SLRESNETS.WIDTH_MULT_LIST
         self.width_mult = cfg.MODEL.SLRESNETS.WIDTH_MULT
+        self.pretrained_path = cfg.MODEL.WEIGHTS
 
         block_setting_dict = {50: [3, 4, 6, 3], 101: [3, 4, 23, 3], 152: [3, 8, 36, 3],}
         self.block_setting = block_setting_dict[depth]
@@ -118,8 +119,7 @@ class SL_RESNET(Backbone):
         return outputs
 
     def init_weights(self, pretrained):
-        # pretrain_dict = torch.load("/data/qilu/projects/pretrained_model/s_resnet50_0.25_0.5_0.75_1.0.pt", map_location=lambda storage, loc: storage)
-        checkpoint = torch.load("/data/qilu/projects/pretrained_model/s_resnet50_0.25_0.5_0.75_1.0.pt")["model"]
+        checkpoint = torch.load(self.pretrained_path)["model"]
         
         new_keys = list(self.state_dict().keys())
         old_keys = list(checkpoint.keys())
@@ -161,8 +161,3 @@ def build_slresnet_backbone(cfg):
     freeze_at = cfg.MODEL.BACKBONE.FREEZE_AT
     s_resnet = SL_RESNET(cfg)
     return SL_RESNET(cfg).freeze(freeze_at)
-
-
-
-
-
