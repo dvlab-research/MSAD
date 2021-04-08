@@ -87,8 +87,8 @@ We provide the results on COCO *val* set with pretrained models. In the followin
 <td align="center">Teacher</td>
 <td align="center">H & L</td>
 <td align="center"> 42.8 </td>
-<!-- <td align="center"> <a href="dd">model</a>&nbsp;|&nbsp;<a href="ss">metrics</a> </td> -->
-<td align="center"> To be released </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1F0iTnr2WuCsanoBaX4Ma8DZXFOnbMrDG/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1lEsL5ax8UaHKCc8l7_-O5OVNJeM8KUbQ/view?usp=sharing">metrics</a> </td>
+<!-- <td align="center"> To be released </td> -->
 </tr>
 </tr>
 <tr><td align="left">FCOS</td>
