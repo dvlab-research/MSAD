@@ -98,9 +98,9 @@ We provide the results on COCO *val* set with pretrained models. In the followin
 <td align="center">1.00</td>
 <td align="center">Student</td>
 <td align="center">L</td>
-<td align="center"> 39.7 </td>
-<!-- <td align="center"> <a href="dd">model</a>&nbsp;|&nbsp;<a href="ss">metrics</a> </td> -->
-<td align="center"> To be released </td>
+<td align="center"> 39.9 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1zNvONf4CtDd-Jap3iTJgbNskJSb75roj/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1a3pcEO5urqoImfIxH3cgGO2PV5w0O5DV/view?usp=sharing">metrics</a> </td>
+<!-- <td align="center"> To be released </td> -->
 </tr>
 <tr><td align="left">FCOS</td>
 <td align="center">Slimmable-R50</td>
