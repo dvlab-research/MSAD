@@ -109,9 +109,9 @@ We provide the results on COCO *val* set with pretrained models. In the followin
 <td align="center">0.75</td>
 <td align="center">Teacher</td>
 <td align="center">H & L</td>
-<td align="center">41.1</td>
-<!-- <td align="center"> <a href="dd">model</a>&nbsp;|&nbsp;<a href="ss">metrics</a> </td> -->
-<td align="center"> To be released </td>
+<td align="center">41.2</td>
+<td align="center"> <a href="https://drive.google.com/file/d/1RePWEGmBKCHE61b_nP8s0oaoLH1tzTZD/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1SB7bpcdjX_VZhxNgVp9DmFIgUvctKSUj/view?usp=sharing">metrics</a> </td>
+<!-- <td align="center"> To be released </td> -->
 </tr>
 </tr>
 <tr><td align="left">FCOS</td>
@@ -132,9 +132,9 @@ We provide the results on COCO *val* set with pretrained models. In the followin
 <td align="center">0.50</td>
 <td align="center">Teacher</td>
 <td align="center">H & L</td>
-<td align="center">38.5</td>
-<!-- <td align="center"> <a href="dd">model</a>&nbsp;|&nbsp;<a href="ss">metrics</a> </td> -->
-<td align="center"> To be released </td>
+<td align="center">38.4</td>
+<td align="center"> <a href="https://drive.google.com/file/d/1bQZnjGFKbLj4iaP3o3Ez4eZg6ZdmrAh9/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1Pa2HLpdFccBNvOddUDdxX2npedD5A_8l/view?usp=sharing">metrics</a> </td>
+<!-- <td align="center"> To be released </td> -->
 </tr>
 </tr>
 <tr><td align="left">FCOS</td>
