@@ -1,6 +1,7 @@
 _BASE_: "Base-SLRESNET-FCOS.yaml"
 MODEL:
   SLRESNETS:
+    NORM: "SyncBN"
     DEPTH: 50
     WIDTH_MULT: 0.75
 INPUT:
