@@ -144,7 +144,7 @@ We provide the results on COCO *val* set with pretrained models. In the followin
 <td align="center">0.50</td>
 <td align="center">Student</td>
 <td align="center">L</td>
-<td align="center"> 36.1 </td>
+<td align="center"> 35.7 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/16LG4Cc_e-dm3h2A26ETHCbx6F7846Jll/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1nNq7JBrcXnXxuoKHhEc94SSGaLBERZww/view?usp=sharing">metrics</a> </td>
 <!-- <td align="center"> To be released </td> -->
 </tr>
