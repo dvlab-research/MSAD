@@ -13,6 +13,6 @@ SOLVER:
   CHECKPOINT_PERIOD: 40000
   WARMUP_ITERS: 500
   IMS_PER_BATCH: 32
-  BASE_LR: 0.01  # Note that RetinaNet uses a different default learning rate
+  BASE_LR: 0.02  # Note that RetinaNet uses a different default learning rate
   STEPS: (30000, 40000)
   MAX_ITER: 45000

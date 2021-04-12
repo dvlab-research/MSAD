@@ -121,9 +121,9 @@ We provide the results on COCO *val* set with pretrained models. In the followin
 <td align="center">0.75</td>
 <td align="center">Student</td>
 <td align="center">L</td>
-<td align="center"> 38.6 </td>
-<!-- <td align="center"> <a href="dd">model</a>&nbsp;|&nbsp;<a href="ss">metrics</a> </td> -->
-<td align="center"> To be released </td>
+<td align="center"> 38.8 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1gWB-RPXTWm33zaFhnRPNu4EmbLQ-9y2r/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1afMHe46GDcxX064yMJCHcZ6UMb3Ek2_C/view?usp=sharing">metrics</a> </td>
+<!-- <td align="center"> To be released </td> -->
 </tr>
 <tr><td align="left">FCOS</td>
 <td align="center">Slimmable-R50</td>
