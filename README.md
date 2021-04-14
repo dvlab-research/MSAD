@@ -18,6 +18,7 @@ This project is based on [Detectron2](https://github.com/facebookresearch/detect
 * Setup the dataset following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md).
 * Copy this project to `/path/to/detectron2/projects/MSAD`
 * Download the slimmable networks in the [github](https://github.com/JiahuiYu/slimmable_networks). The slimmable resnet50 pretrained weight link is [here](https://drive.google.com/open?id=1f6q37OkZaz_0GoOAwllHlXNWuKwor2fC).
+* Set the "find_unused_parameters=True" in distributed training of your own detectron2. You could modify it in detectron2/engine/defaults.py.
 
 ## Pretrained Weight
 * Move the pretrained weight to your target path 
@@ -65,7 +66,7 @@ python3 projects/MSAD/train_net_S.py --config-file <config.yaml> --num-gpus 8 --
 
 
 ## Results
-We provide the results on COCO *val* set with pretrained models. In the following table, we define the backbone FLOPs as capacity. For brevity, we regard the FLOPs of Slimmable Resnet50 in width 1.0 and high resolution input (800,1333) as 1x. 
+We provide the results on COCO *val* set with pretrained models. In the following table, we define the backbone FLOPs as capacity. For brevity, we regard the FLOPs of Slimmable Resnet50 in width 1.0 and high resolution input (800,1333) as 1x. The metrics are reported in old-version detectron2. The new-version detectron will report higher loss value but it does not affect the final result.
 
 <table><tbody>
 <!-- START TABLE -->
