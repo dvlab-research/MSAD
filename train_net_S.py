@@ -23,7 +23,7 @@ class Trainer(DefaultTrainer):
         return COCOEvaluator(dataset_name, cfg, True, output_folder)
 
     def modify_checkpoint(self, cfg):
-        self.checkpoint = SLRDetectionCheckpointer(self.model, cfg.OUTPUT_DIR, optimizer=self.optimizer, scheduler=self.scheduler)
+        self.checkpointer = SLRDetectionCheckpointer(self.model, cfg.OUTPUT_DIR, optimizer=self.optimizer, scheduler=self.scheduler)
 
     def transfer_t_to_s(self):
         if comm.get_world_size()>1:

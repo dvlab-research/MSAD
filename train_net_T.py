@@ -21,6 +21,8 @@ class Trainer(DefaultTrainer):
         if output_folder is None:
             output_folder = os.path.join(cfg.OUTPUT_DIR, "inference")
         return COCOEvaluator(dataset_name, cfg, True, output_folder)
+    def modify_checkpoint(self, cfg):
+        self.checkpointer = SLRDetectionCheckpointer(self.model, cfg.OUTPUT_DIR, optimizer=self.optimizer, scheduler=self.scheduler)
 
 def setup(args):
     """
@@ -48,6 +50,7 @@ def main(args):
         return res
 
     trainer = Trainer(cfg)
+    trainer.modify_checkpoint(cfg)
     trainer.resume_or_load(resume=args.resume)
     # trainer.transfer_t_to_s()
     return trainer.train()
