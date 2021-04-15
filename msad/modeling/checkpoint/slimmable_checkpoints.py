@@ -41,7 +41,7 @@ class SLRDetectionCheckpointer(Checkpointer):
         loaded = super()._load_file(filename)  # load native pth checkpoint
         if "model" not in loaded:
             loaded = {"model": loaded}
-        if "0.25_0.5_0.75_1.0" in filename:
+        if "0.5_0.75_1.0" in filename:
             loaded.update({"slimmable": True})
         return loaded
 
@@ -84,6 +84,7 @@ class SLRDetectionCheckpointer(Checkpointer):
         new_checkpoint_state_dict = {}
         for k in list(checkpoint_state_dict.keys()):
             new_checkpoint_state_dict["T_backbone.bottom_up.{}".format(k)] = checkpoint_state_dict[k]
+        # import pdb.set_trace()
 
         model_state_dict = self.model.state_dict()
         incorrect_shapes = []
@@ -92,9 +93,11 @@ class SLRDetectionCheckpointer(Checkpointer):
             if k in model_state_dict:
                 shape_model = tuple(model_state_dict[k].shape)
                 shape_checkpoint = tuple(new_checkpoint_state_dict[k].shape)
+                # import pdb
+                # pdb.set_trace()
                 if shape_model != shape_checkpoint:
                     incorrect_shapes.append((k, shape_checkpoint, shape_model))
-                    checkpoint_state_dict.pop(k)
+                    new_checkpoint_state_dict.pop(k)
         # pyre-ignore
         incompatible = self.model.load_state_dict(new_checkpoint_state_dict, strict=False)
         return _IncompatibleKeys(

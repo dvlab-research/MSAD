@@ -90,3 +90,18 @@ class SlimmableLinear(nn.Linear):
     def freeze(self):
         for p in self.parameters():
             p.requires_grad = False
+
+def make_divisible(v, divisor=8, min_value=1):
+    """
+    forked from slim:
+    https://github.com/tensorflow/models/blob/\
+    0344c5503ee55e24f0de7f37336a6e08f10976fd/\
+    research/slim/nets/mobilenet/mobilenet.py#L62-L69
+    """
+    if min_value is None:
+        min_value = divisor
+    new_v = max(min_value, int(v + divisor / 2) // divisor * divisor)
+    # Make sure that round down does not go down by more than 10%.
+    if new_v < 0.9 * v:
+        new_v += divisor
+    return new_v

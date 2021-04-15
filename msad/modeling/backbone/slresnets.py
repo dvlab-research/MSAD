@@ -115,7 +115,6 @@ class SL_RESNET(Backbone):
         # c5
         x = self.features[1+self.block_setting[0]+self.block_setting[1]+self.block_setting[2]:1+self.block_setting[0]+self.block_setting[1]+self.block_setting[2]+self.block_setting[3]](x)
         outputs["res5"] = x
-
         return outputs
 
     def init_weights(self, pretrained):

@@ -1,1 +1,1 @@
-from .fpn import build_slresnet_fpn_backbone
+from .fpn import build_slresnet_fpn_backbone, build_slmobilev2_fpn_backbone

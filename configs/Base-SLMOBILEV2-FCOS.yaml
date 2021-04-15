@@ -1,0 +1,24 @@
+MODEL:
+  META_ARCHITECTURE: "TFCOS"
+  WEIGHTS: "/data/qilu/projects/pretrained_model/s_mobilenet_v2_0.35_0.5_0.75_1.0.pt"
+  BACKBONE:
+    NAME: "build_slmobilev2_fpn_backbone"
+    FREEZE_AT: -1
+  SLRESNETS:
+    NORM: "BN"
+    WIDTH_MULT: 1.0
+    WIDTH_MULT_LIST: [0.35, 0.5, 0.75, 1.0]
+  FPN:
+    IN_FEATURES: ["res2", "res3", "res4", "res5"]
+DATASETS:
+  TRAIN: ("coco_2017_train",)
+  TEST: ("coco_2017_val",)
+SOLVER:
+  CHECKPOINT_PERIOD: 40000
+  IMS_PER_BATCH: 2
+  BASE_LR: 0.01  # Note that RetinaNet uses a different default learning rate
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  WARMUP_ITERS: 1500
+INPUT:
+  MIN_SIZE_TRAIN: (800, )
