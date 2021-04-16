@@ -137,8 +137,10 @@ class SFCOS(nn.Module):
         fr_features = []
         for hr_feature, lr_feature in zip(hr_features, lr_features):
             fr_feature = torch.cat([hr_feature, lr_feature], dim=1)
-            fusion_score = self.SE(fr_feature).view(-1)
-            fr_features.append(fusion_score[0]*hr_feature+fusion_score[1]*lr_feature)
+            fusion_score = self.SE(fr_feature)
+            fr_features.append(fusion_score[:,0].unsqueeze(-1)*hr_feature+fusion_score[:,1].unsqueeze(-1)*lr_feature)
+            # fusion_score = self.SE(fr_feature).view(-1)
+            # fr_features.append(fusion_score[0]*hr_feature+fusion_score[1]*lr_feature)
 
         locations = self.compute_locations(hr_features)
 
