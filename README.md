@@ -14,7 +14,7 @@ This project provides an implementation for the CVPR 2021 paper "[Multi-Scale Al
 
 ## Installation
 This project is based on [Detectron2](https://github.com/facebookresearch/detectron2), which can be constructed as follows.
-* Install Detectron2 following [the instructions](https://detectron2.readthedocs.io/tutorials/install.html). We are noting that our code and released in detectron2 V0.2.1 (commit version: be792b959bca9af0aacfa04799537856c7a92802) and pytorch 1.4.
+* Install Detectron2 following [the instructions](https://detectron2.readthedocs.io/tutorials/install.html). We are noting that our code is checked in detectron2 V0.2.1 (commit version: be792b959bca9af0aacfa04799537856c7a92802) and pytorch 1.4.
 * Setup the dataset following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md).
 * Copy this project to `/path/to/detectron2/projects/MSAD`
 * Download the slimmable networks in the [github](https://github.com/JiahuiYu/slimmable_networks). The slimmable resnet50 pretrained weight link is [here](https://drive.google.com/open?id=1f6q37OkZaz_0GoOAwllHlXNWuKwor2fC).
